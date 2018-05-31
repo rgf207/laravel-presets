@@ -16,6 +16,7 @@ class PresetServiceProvider extends ServiceProvider
     {
         PresetCommand::macro('onethirtyone', function($command) {
             Preset::install();
+            $this->comment('Preset loaded. Run npm install & n npm run dev to compile assets.');
         });
     }
 

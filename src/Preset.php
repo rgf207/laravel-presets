@@ -49,5 +49,6 @@ class Preset extends LaravelPreset
         copy(__DIR__.'/stubs/Error.js', resource_path('assets/js/classes/Error.js'));
         copy(__DIR__.'/stubs/bootstrap.js', resource_path('assets/js/bootstrap.js'));
         copy(__DIR__.'/stubs/app.js', resource_path('assets/js/app.js'));
+        copy(__DIR__.'/stubs/tailwind.js', base_path('tailwind.js'));
     }
 }
