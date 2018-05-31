@@ -12,11 +12,11 @@ class PresetServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot()
+    public function boot ()
     {
-        PresetCommand::macro('onethirtyone', function($command) {
+        PresetCommand::macro('onethirtyone', function ($command) {
             Preset::install();
-            $this->comment('Preset loaded. Run npm install & n npm run dev to compile assets.');
+            $command->comment('Preset loaded. Run composer update && npm install && npm run dev to compile assets.');
         });
     }
 
@@ -25,7 +25,7 @@ class PresetServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function register()
+    public function register ()
     {
         //
     }
