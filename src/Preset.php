@@ -14,7 +14,7 @@ class Preset extends LaravelPreset
         static::cleanSassDirectory();
         static::updatePackages();
         static::updateMix();
-        static::addJs();
+        static::updateJs();
     }
 
     public static function cleanSassDirectory()
@@ -39,10 +39,12 @@ class Preset extends LaravelPreset
         copy(__DIR__.'/stubs/webpack.mix.js', base_path('webpack.mix.js'));
     }
     
-    public static function addJs()
+    public static function updateJs()
     {
         mkdir(resource_path('/assets/js/classes'));
         copy(__DIR__.'/stubs/Form.js', resource_path('assets/js/classes/Form.js'));
         copy(__DIR__.'/stubs/Error.js', resource_path('assets/js/classes/Error.js'));
+        copy(__DIR__.'/stubs/bootstrap.js', resource_path('assets/js/bootstrap.js'));
+        copy(__DIR__.'/stubs/app.js', resource_path('assets/js/app.js'));
     }
 }

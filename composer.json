@@ -1,0 +1,25 @@
+{
+    "name": "onethirtyone/laravel-preset",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Robb",
+            "email": "Robb@131studios.com"
+        }
+    ],
+    "require": {
+
+    },
+    "autoload": {
+        "psr-4": {
+            "onethirtyone\\laravel-preset\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "onethirtyone\\laravel-preset\\PresetServiceProvider"
+            ]
+        }
+    }
+}
