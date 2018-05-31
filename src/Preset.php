@@ -21,7 +21,7 @@ class Preset extends LaravelPreset
     {
         File::cleanDirectory(resource_path('assets/sass'));
 
-        File::put(resource_path('assets/sass/app.sass'), '');
+        File::put(resource_path('assets/sass/app.scss'), '');
     }
 
     public static function updatePackageArray($packages)
