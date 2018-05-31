@@ -12,13 +12,13 @@
     },
     "autoload": {
         "psr-4": {
-            "onethirtyone\\laravel-preset\\": "src/"
+            "onethirtyone\\preset\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "onethirtyone\\laravel-preset\\PresetServiceProvider"
+                "onethirtyone\\preset\\PresetServiceProvider"
             ]
         }
     }

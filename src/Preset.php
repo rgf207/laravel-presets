@@ -1,6 +1,6 @@
 <?php
 
-namespace onethirtyone;
+namespace onethirtyone\preset;
 
 use Illuminate\Foundation\Console\Presets\Preset as LaravelPreset;
 use Illuminate\Support\Arr;
