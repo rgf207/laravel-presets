@@ -31,6 +31,7 @@ class Preset extends LaravelPreset
             'popper.js',
             'jquery',
             'lodash',
+            'bootstrap',
         ]));
     }
 
