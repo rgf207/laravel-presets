@@ -41,11 +41,14 @@ class Preset extends LaravelPreset
     {
         return array_merge([
             'laravel-mix-tailwind' => '^0.1.0',
-            "tailwindcss" => "^0.5.3",
+            'laravel-mix-purgecss' => '^2.2.0',
+            'postcss-nesting' => '^5.0.0',
+            'postcss-import' => '^11.1.0',
+            'tailwindcss' => '>=0.5.3',
         ], Arr::except($packages, [
+            'bootstrap-sass',
             'popper.js',
             'jquery',
-            'lodash',
             'bootstrap',
         ]));
     }
