@@ -113,9 +113,4 @@ class Preset extends LaravelPreset
         ]));
         
     }
-
-    public static function updateDependencies($composer = true)
-    {
-        shell_exec($composer ? 'composer update' : 'npm install');
-    }
 }

@@ -1,14 +1,15 @@
 {
     "name": "onethirtyone/laravel-preset",
+    "description": "A custom Laravel preset designed for and by 131 Studios.",
     "license": "MIT",
     "authors": [
         {
-            "name": "Robb",
+            "name": "Robb Fountain",
             "email": "Robb@131studios.com"
         }
     ],
     "require": {
-
+        "laravel/framework": "^5.5"
     },
     "autoload": {
         "psr-4": {

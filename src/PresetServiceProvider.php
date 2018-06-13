@@ -12,11 +12,13 @@ class PresetServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot ()
+    public function boot()
     {
-        PresetCommand::macro('onethirtyone', function ($command) {
+        PresetCommand::macro('131studios', function ($command) {
             Preset::install();
-            $command->comment('Preset loaded. Run composer update && npm install && npm run dev to compile assets.');
+
+            $command->comment('Preset 131studios loaded.');
+            $command->comment('Run composer update && npm install && npm run dev to compile assets.');
         });
     }
 
@@ -25,7 +27,7 @@ class PresetServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function register ()
+    public function register()
     {
         //
     }
