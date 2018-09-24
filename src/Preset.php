@@ -29,7 +29,7 @@ class Preset extends LaravelPreset
     {
         File::cleanDirectory(resource_path('assets/sass'));
 
-        File::put(resource_path('assets/sass/app.scss'), '');
+        copy(__DIR__.'/stubs/app.scss', resource_path('assets/sass/app.scss'));
     }
 
     /**
