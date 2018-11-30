@@ -14,11 +14,19 @@ class PresetServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        PresetCommand::macro('131studios', function ($command) {
-            Preset::install();
+        PresetCommand::macro('standard', function ($command) {
+            Presets\Standard::install();
 
-            $command->comment('Preset 131studios loaded.');
-            $command->comment('Run composer update && npm install && npm run dev to compile assets.');
+            $command->comment('Preset Standard loaded.');
+            $command->comment('Run composer update && npm install && php artisan nova:install && npm run dev to compile assets.');
+        });
+
+
+        PresetCommand::macro('spark', function ($command) {
+            Presets\Spark::install();
+
+            $command->comment('Preset Spark loaded.');
+            $command->comment('Complete the spark installation process to continue.');
         });
     }
 
