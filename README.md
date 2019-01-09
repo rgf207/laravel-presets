@@ -17,6 +17,6 @@ edit composer.json add:
     ...
     "onethirtyone/laravel-presets": "*"
     ...
-    ```
+```
     
     
