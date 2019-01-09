@@ -6,10 +6,17 @@ edit composer.json add:
 
 ```
 "repositories": [
-...
+         ...
         {
             "type": "vcs",
-            "url": "https://github.com/robbfountain/laravel-presets.git"
+            "url": "git@github.com:robbfountain/laravel-presets.git"
         }
         ...
     ],
+    "require": {
+    ...
+    "onethirtyone/laravel-presets": "*"
+    ...
+    ```
+    
+    
