@@ -14,5 +14,11 @@ edit composer.json add:
     "require": {
     "onethirtyone/laravel-preset": "*"
 ```
+
+Run 
+
+```
+php artisan preset [standard|spark]
+```
     
     
