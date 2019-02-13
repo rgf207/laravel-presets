@@ -33,6 +33,7 @@ class Standard extends BasePreset
     {
         return array_merge([
             'laravel/nova' => '~1.0',
+             'vyuldashev/nova-permission': '^1.4'
         ], Arr::except($packages, [
             //
         ]));
