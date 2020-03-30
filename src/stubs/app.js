@@ -2,7 +2,7 @@ require('./bootstrap');
 
 window.Vue = require('vue');
 
-import Form from './classes/Form';
+import Form from 'form-class';
 window.Form = Form;
 
 const app = new Vue({

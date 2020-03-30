@@ -2,8 +2,8 @@
 
 namespace onethirtyone\preset;
 
-use Illuminate\Foundation\Console\PresetCommand;
 use Illuminate\Support\ServiceProvider;
+use Laravel\Ui\UiCommand;
 
 class PresetServiceProvider extends ServiceProvider
 {
@@ -14,19 +14,11 @@ class PresetServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        PresetCommand::macro('standard', function ($command) {
+        UiCommand::macro('standard', function ($command) {
             Presets\Standard::install();
 
             $command->comment('Preset Standard loaded.');
-            $command->comment('Run composer update && npm install && php artisan nova:install && npm run dev to compile assets.');
-        });
-
-
-        PresetCommand::macro('spark', function ($command) {
-            Presets\Spark::install();
-
-            $command->comment('Preset Spark loaded.');
-            $command->comment('Complete the spark installation process to continue.');
+            $command->comment('Run npm install && npm run dev to compile assets.');
         });
     }
 

@@ -3,7 +3,6 @@
 namespace onethirtyone\preset\Presets;
 
 use Illuminate\Support\Arr;
-use function resource_path;
 
 /**
  * Class Standard
@@ -32,8 +31,7 @@ class Standard extends BasePreset
     public static function updateComposerArray($packages)
     {
         return array_merge([
-            'laravel/nova' => '~1.0',
-             'vyuldashev/nova-permission': '^1.4'
+
         ], Arr::except($packages, [
             //
         ]));
@@ -48,10 +46,7 @@ class Standard extends BasePreset
     public static function updateRepositoriesArray($repositories)
     {
         return array_merge([
-            [
-                "type" => "composer",
-                "url" => "https://nova.laravel.com",
-            ],
+
         ], Arr::except($repositories, [
             //
         ]));
@@ -70,12 +65,8 @@ class Standard extends BasePreset
      */
     public static function updateJs()
     {
-        mkdir(resource_path('/js/classes'));
-        copy(__DIR__ . './../stubs/Form.js', resource_path('/js/classes/Form.js'));
-        copy(__DIR__ . './../stubs/Error.js', resource_path('/js/classes/Error.js'));
         copy(__DIR__ . './../stubs/bootstrap.js', resource_path('/js/bootstrap.js'));
         copy(__DIR__ . './../stubs/app.js', resource_path('/js/app.js'));
-        copy(__DIR__ . './../stubs/tailwind.js', base_path('tailwind.js'));
+        copy(__DIR__ . './../stubs/tailwind.config.js', base_path('tailwind.config.js'));
     }
-
 }

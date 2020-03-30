@@ -4,9 +4,9 @@
 namespace onethirtyone\preset\Presets;
 
 
-use Illuminate\Foundation\Console\Presets\Preset as LaravelPreset;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\File;
+use Laravel\Ui\Presets\Preset as LaravelPreset;
 
 /**
  * Class BasePreset
@@ -22,11 +22,13 @@ abstract class BasePreset extends LaravelPreset
     public static function updatePackageArray($packages)
     {
         return array_merge([
-            'laravel-mix-tailwind' => '^0.1.0',
             'laravel-mix-purgecss' => '^2.2.0',
             'postcss-nesting' => '^5.0.0',
             'postcss-import' => '^11.1.0',
-            'tailwindcss' => '>=0.5.3',
+            'tailwindcss' => '^1.2.0',
+            'form-class' => '^1.0',
+            '@tailwindcss/ui' => '^0.1.3',
+            '@tailwindcss/custom-forms' => '^0.2.1',
         ], Arr::except($packages, [
             'bootstrap-sass',
             'popper.js',
@@ -49,13 +51,6 @@ abstract class BasePreset extends LaravelPreset
      * @return mixed
      */
     abstract public static function updateJs();
-
-    /**
-     * @param $packages
-     *
-     * @return mixed
-     */
-    abstract public static function updateComposerArray($packages);
 
     /**
      *  Cleans Sass Directory
@@ -95,4 +90,11 @@ abstract class BasePreset extends LaravelPreset
             json_encode($packages, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) . PHP_EOL
         );
     }
+
+    /**
+     * @param $packages
+     *
+     * @return mixed
+     */
+    abstract public static function updateComposerArray($packages);
 }
